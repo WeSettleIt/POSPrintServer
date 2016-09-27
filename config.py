@@ -1,3 +1,2 @@
-DEBUG = True
-
-PRINTER = ''
+ID_VENDOR = 0x04b8
+ID_PRODUCT = 0x0202
