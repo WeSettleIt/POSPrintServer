@@ -11,20 +11,24 @@ Installation
 ### Debian
 1. Unpack to /opt/POSPrintServer/
 2. Install startupscript
-   > # cd /opt/POSPrintServer/
-   > # chmod +x posprintserver.sh
-   > # ln -s posprintserver.sh /etc/init.d/
-   > # update-rc.d posprintserver defaults
-3. # /etc/init.d/posprintserver start
+```
+   $ cd /opt/POSPrintServer/
+   $ chmod +x posprintserver.sh
+   $ ln -s posprintserver.sh /etc/init.d/
+   $ update-rc.d posprintserver defaults
+   ```
+3. Start Service
+
+   `$ /etc/init.d/posprintserver start`
 
 ### Windows user
 Everything must be done with a admin user with a password, otherwise nssm will not work to install POSPrintServer as a service.
 
 #### Python
 1. Install latest Python 3, 64bit
-   > https://www.python.org/downloads/release/python-351/  
-   >
-   > Check *Add Python 3.x to PATH* during install.
+   https://www.python.org/downloads/release/python-351/  
+   
+   Check *Add Python 3.x to PATH* during install.
 
 #### Unpacking
 Unpack archive to *C:\\WeSettleIt\\POSPrintServer\\*
@@ -50,15 +54,15 @@ Troubleshooting
 ### Start manually
 Try to start WeMenu manually to see that all requirements are installed and configuration is correct.
 
-> cd C:\\WeSettleIt\\POSPrintServer\\
->
-> workon posprintserver
->
-> python run.py
+```
+cd C:\WeSettleIt\\POSPrintServer\
+workon posprintserver
+python run.py
+```
 
 ### Check service logfile
 When installing POSPrintServer as a service using nssm, std out and std err will output to file *C:\\WeSettleIt\\logs\\﻿posprintserver.std.log*.
 
-In Debian std out will go to /var/log/posprintserver.log
+In Debian std out will go to */var/log/posprintserver.log*
 
 Check this file for any errors.
