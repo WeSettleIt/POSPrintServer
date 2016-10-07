@@ -11,12 +11,14 @@ Installation
 ### Debian
 1. Unpack to /opt/POSPrintServer/
 2. Install startupscript
-```
+
+   ```
    $ cd /opt/POSPrintServer/
    $ chmod +x posprintserver.sh
    $ ln -s posprintserver.sh /etc/init.d/
    $ update-rc.d posprintserver defaults
    ```
+
 3. Start Service
 
    `$ /etc/init.d/posprintserver start`
