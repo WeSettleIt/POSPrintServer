@@ -13,15 +13,21 @@ Installation
 2. Install startupscript
 
    ```
-   $ cd /opt/POSPrintServer/
-   $ chmod +x posprintserver.sh
-   $ ln -s posprintserver.sh /etc/init.d/
-   $ update-rc.d posprintserver defaults
+   cd /opt/POSPrintServer/
+   chmod +x posprintserver.sh
+   ln -s posprintserver.sh /etc/init.d/posprintserver
+   update-rc.d posprintserver defaults
    ```
 
-3. Start Service
+3. Install Python dependencies
 
-   `$ /etc/init.d/posprintserver start`
+    ```
+    pip install -r requirements.txt
+    ```
+
+4. Start Service
+
+   `/etc/init.d/posprintserver start`
 
 ### Windows user
 Everything must be done with a admin user with a password, otherwise nssm will not work to install POSPrintServer as a service.
@@ -54,11 +60,9 @@ Config is set in config.py
 Troubleshooting
 ---------------
 ### Start manually
-Try to start WeMenu manually to see that all requirements are installed and configuration is correct.
+Try to start POSPrintServer manually to see that all requirements are installed and configuration is correct.
 
 ```
-cd C:\WeSettleIt\\POSPrintServer\
-workon posprintserver
 python run.py
 ```
 
